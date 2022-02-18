@@ -26,8 +26,11 @@ public class TryProcessing extends PApplet {
     }
 
     private void initializingBalls() {
+        int diameter = 10;
+        int posX = 0;
         for(int ballsIdx = 0; ballsIdx < ballsCount ; ballsIdx++){
-            balls.add(new Ball(10,0, getPosY(ballsIdx), getSpeed(ballsIdx)));
+            Ball newBall = new Ball(diameter, posX, getPosY(ballsIdx), getSpeed(ballsIdx));
+            balls.add(newBall);
         }
     }
 
